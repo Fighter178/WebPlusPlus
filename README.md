@@ -2,10 +2,13 @@
 Wwb++ strives to make borwsing easier, faster, safer, and more productive. 
 
 
-# Feature
+# Features
 ✅ PrivacyProtect - Prevent unauthorized privacy setting changes.
+
 ✅ AdBlocker (coming soon) block unwanted and intrusive ads with two levels, block all and block intrusive ads. 
-✅ Password Strength Calculator - Simply press a button and estimate your password's strength
+
+✅ Password Strength Calculator - Simply press a button and estimate your password's strength.
+
 ✅ More coming soon
 
 # Install
