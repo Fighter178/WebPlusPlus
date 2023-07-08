@@ -1,0 +1,13 @@
+$mainColor:rgb(35,35,35);
+$shadow:rgb(24, 24, 24);
+/// Main button styles
+@mixin mainBtn(){
+    background-color: $mainColor;
+    border:none;
+    color:azure;
+    
+    box-shadow: 12px 8px 12px $shadow;
+}
+.update-btn {
+    @include mainBtn();
+}

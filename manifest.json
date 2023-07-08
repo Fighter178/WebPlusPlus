@@ -1,0 +1,35 @@
+{
+    "manifest_version":2,
+    "version":"0.2.0",
+    "name":"Web++",
+    "description":"Improve your browsing experience.",
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+    "content_scripts":[ 
+        {
+            "matches":[
+                "https://*/*"
+            ],
+            "js":[
+                "index.js"
+            ],
+            "run_at":"document_start"
+        }
+    ],
+    "permissions":[
+        "tabs",
+        "contextMenus",
+        "privacy",
+        "browserSettings"
+    ],
+    "background":{
+        "scripts":[
+            "background.js"
+        ],
+        "persistent":true
+    },
+    "browser_action":{
+        "default_icon":"/images/icon32.jpg",
+        "default_title":"Web++",
+        "default_popup":"ui/popup/popup.html"
+    }
+}

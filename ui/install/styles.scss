@@ -1,0 +1,9 @@
+@use "../css/styles.scss" as main;
+
+button {
+    @include main.main_btn();
+}
+
+* {
+    @include main.font();
+}

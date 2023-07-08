@@ -1,0 +1,18 @@
+button {
+  padding: 0.2em;
+  border-radius: 0.25em;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  -ms-border-radius: 0.25em;
+  -o-border-radius: 0.25em;
+  border: none;
+  background-color: #121212;
+  color: snow;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "build":"web-ext build --ignore-files '*.scss' '*.ts' '*.map'",
+    "dev":"web-ext run"
+  },
+  "dependencies": {
+    "@types/firefox-webext-browser": "^111.0.1",
+    "terser-webpack-plugin": "^5.3.9"
+  },
+  "devDependencies": {
+    "terser": "^5.18.2"
+  }
+}
