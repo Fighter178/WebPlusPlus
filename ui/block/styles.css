@@ -1,11 +1,36 @@
-body {
-  background: #212121;
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 550;
+  font-weight: 550;
+  color-scheme: dark;
+}
+
+:root {
+  background: #121212;
   color: snow;
+}
+
+img {
+  width: 6rem;
+  height: 6rem;
+  display: inline;
+}
+
+.center {
   display: grid;
   place-items: center;
-  margin-top: 1em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+}
+
+.reason-main {
+  color: red;
+}
+
+.reason {
+  transform: scale(1.25, 1.25);
+  -webkit-transform: scale(1.25, 1.25);
+  -moz-transform: scale(1.25, 1.25);
+  -ms-transform: scale(1.25, 1.25);
+  -o-transform: scale(1.25, 1.25);
 }
 
 button {
@@ -23,6 +48,12 @@ button {
   font-size: larger;
 }
 button:disabled {
+  background: #212121;
+}
+button:hover {
+  cursor: pointer;
+}
+button:disabled {
   background: #373737;
 }
 button:not(:disabled):hover {
@@ -36,9 +67,4 @@ button[data-loading]:hover {
   cursor: wait;
 }
 
-* {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 550;
-}
-
-/*# sourceMappingURL=popup.css.map */
+/*# sourceMappingURL=styles.css.map */

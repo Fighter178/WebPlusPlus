@@ -6,8 +6,24 @@ button {
   -ms-border-radius: 0.25em;
   -o-border-radius: 0.25em;
   border: none;
-  background-color: #121212;
+  transition: all 250ms ease-in-out;
+  background: #0c0c0c;
   color: snow;
+  padding: 12px;
+  font-size: larger;
+}
+button:disabled {
+  background: #373737;
+}
+button:not(:disabled):hover {
+  background-color: red;
+  cursor: pointer;
+}
+button:disabled:hover:not([data-loading]) {
+  cursor: not-allowed;
+}
+button[data-loading]:hover {
+  cursor: wait;
 }
 
 * {

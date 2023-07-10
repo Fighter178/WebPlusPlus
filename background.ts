@@ -1,19 +1,41 @@
 browser.runtime.onConnect.addListener(async(port)=>{
-    // Extract window object from tab.
     const sender = port.sender
     const tab = sender?.tab;
-    if(!sender) {port.disconnect(); return;};
-    if(!tab) {port.disconnect();return;};
-    if(!tab.id) {port.disconnect();return;};
+    if(!sender || !tab || !tab.id) {
+        port.disconnect(); 
+        console.error("Connection request to background script denied due to either invalid sender, tab, or tab id.")
+        return;
+    };
     port.onMessage.addListener(async(message)=>{
         const msg = message as Message;
-        console.log(msg);
+        if(msg.to !== "background") {
+            console.warn("Background script received a message not sent to it. ");
+            return;
+        }
+        switch(msg.type) {
+            case "query/block":
+                port.postMessage({
+                    type:"count/block",
+                    response:msg,
+                    data:0
+                } as Message);
+                break;
+            default:
+                port.postMessage({
+                    type:"error/unknown-msg"
+                });
+                console.error("Background script received an unknown message: ", msg);
+        }
     });
 });
 
+
+
 interface Message {
     type:string
-    data:any
+    data:any,
+    response?:Message,
+    to:"background" | "contentScript"
 };
 
 (async()=>{
